@@ -1,10 +1,22 @@
+
+//Gitbash check ins: 
+//git add .
+//git commit -m "Insert msg here"
+//git push
 void setup() {
   size(1250, 700);
-  background(0);
+  noCursor();
+  smooth();
+
+  paddle = new Paddle(mouseX, mouseY);
 }
 
+Paddle paddle;
+
 void draw() {
+  background(0);
   stage();
+  paddle.run();
 }
 
 void stage() {
